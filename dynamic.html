@@ -1,0 +1,23 @@
+<!-- Save this as dynamic.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Web Page</title>
+</head>
+<body>
+    <h1>Welcome to the Dynamic Web Page</h1>
+    <p>The current time is: <span id="time"></span></p>
+    
+    <a href="index.html">Back to Static Page</a>
+
+    <script>
+        // Dynamically update the time
+        function updateTime() {
+            document.getElementById('time').textContent = new Date().toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
